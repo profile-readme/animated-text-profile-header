@@ -14,6 +14,8 @@ Encabezados animados y limpios para el README de tu perfil de GitHub, con tus pr
 
 Cada encabezado de arriba es un SVG generado en vivo a partir de texto real. Abre la [página de ayuda](https://readmes.pages.dev/text/help) para probar todas las opciones con vista previa en vivo.
 
+Para agentes de IA y herramientas hay una guía en Markdown en [readmes.pages.dev/text/agents](https://readmes.pages.dev/text/agents).
+
 Palabras clave: texto animado, encabezado de README de perfil de GitHub, SVG de escritura, animación de escritura, texto en onda, texto en degradado, título de README, título de sección, insignia de estado, estado de disponibilidad, frase del día, decoración de perfil, Cloudflare Pages Functions.
 
 ## Inicio rápido

@@ -17,6 +17,8 @@ typing, wave, fade or glow, and paste one line of Markdown.
 
 Every heading above is a live SVG made from real text. Open the
 [help page](https://readmes.pages.dev/text/help) to try every option with a live preview.
+AI agents and tools can read the Markdown guide at
+[readmes.pages.dev/text/agents](https://readmes.pages.dev/text/agents).
 
 Keywords: animated text, GitHub profile README header, typing SVG, typing animation, wave
 text, gradient text, README heading, section title, status badge, availability status,

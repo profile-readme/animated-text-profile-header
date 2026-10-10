@@ -14,6 +14,8 @@
 
 上面的每個標題都是由真正的文字產生的 SVG。打開[說明頁](https://readmes.pages.dev/text/help)，可以用即時預覽試遍所有選項。
 
+給 AI 代理和工具的 Markdown 指南位於 [readmes.pages.dev/text/agents](https://readmes.pages.dev/text/agents)。
+
 關鍵字：動態文字、GitHub 個人首頁 README 標題、打字 SVG、打字動畫、波浪文字、漸層文字、README 標題、章節標題、狀態徽章、上線狀態、每日一句、首頁裝飾、Cloudflare Pages Functions。
 
 ## 快速開始

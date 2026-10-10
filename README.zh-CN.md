@@ -14,6 +14,8 @@
 
 上面的每个标题都是由真实文字生成的 SVG。打开[帮助页](https://readmes.pages.dev/text/help)，可以用实时预览试遍所有选项。
 
+面向 AI 代理和工具的 Markdown 指南位于 [readmes.pages.dev/text/agents](https://readmes.pages.dev/text/agents)。
+
 关键词：动态文字、GitHub 个人主页 README 标题、打字 SVG、打字动画、波浪文字、渐变文字、README 标题、章节标题、状态徽章、在线状态、每日一句、主页装饰、Cloudflare Pages Functions。
 
 ## 快速开始

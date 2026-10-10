@@ -14,6 +14,8 @@ Des titres animés et soignés pour le README de votre profil GitHub, avec vos p
 
 Chaque titre ci-dessus est un SVG généré en direct à partir de vrai texte. Ouvrez la [page d'aide](https://readmes.pages.dev/text/help) pour essayer toutes les options avec un aperçu en direct.
 
+Pour les agents d'IA et les outils, un guide Markdown se trouve sur [readmes.pages.dev/text/agents](https://readmes.pages.dev/text/agents).
+
 Mots-clés : texte animé, titre de README de profil GitHub, SVG de frappe, animation de frappe, texte en vague, texte en dégradé, titre de README, titre de section, badge de statut, statut de disponibilité, citation du jour, décoration de profil, Cloudflare Pages Functions.
 
 ## Démarrage rapide

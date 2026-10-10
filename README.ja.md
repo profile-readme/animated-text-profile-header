@@ -14,6 +14,8 @@ GitHub プロフィール README のための、自分の言葉で作れるす�
 
 上の見出しはすべて、本物の文字から作られた SVG です。[ヘルプページ](https://readmes.pages.dev/text/help)では、すべてのオプションをライブプレビューで試せます。
 
+AI エージェントやツール向けには、Markdown のガイドが [readmes.pages.dev/text/agents](https://readmes.pages.dev/text/agents) にあります。
+
 キーワード：動くテキスト、GitHub プロフィール README の見出し、タイピング SVG、タイピングアニメーション、波打つ文字、グラデーション文字、README の見出し、セクションタイトル、ステータスバッジ、在席ステータス、今日のひとこと、プロフィールの飾り、Cloudflare Pages Functions。
 
 ## クイックスタート
