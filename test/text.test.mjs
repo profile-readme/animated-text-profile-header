@@ -112,3 +112,11 @@ test("custom text: path and query forms, case kept, guardrails", async () => {
   assert.equal(visible(ctrl.body), "ABC");
   assert.ok(!(await get("say/%3Cscript%3E")).body.includes("<script>"));
 });
+
+test("builder script keeps its regex escapes (letter s must survive)", async () => {
+  const html = await (await servePage(new Request("https://readmes.pages.dev/text/help"), "help")).text();
+  const js = html.match(/<script>([\s\S]*?)<\/script>\s*<\/body>/)[1];
+  assert.ok(js.includes('replace(/\\s+/g," ")'), "whitespace regex is /\\s+/g");
+  assert.ok(js.includes('replace(/[\\[\\]]/g,"")'), "bracket regex is /[\\[\\]]/g");
+  new Function(js); // the served script must at least parse
+});
