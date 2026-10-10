@@ -1,5 +1,7 @@
 # animated-text-profile-header
 
+English | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [Français](README.fr.md) | [Español](README.es.md)
+
 Clean animated headings for your GitHub profile README, with your own words. Write any
 short text in the URL, or use built-in words such as "About me" and "Projects". You can
 also show a status you switch with one link, or a quote of the day. Pick an effect like
@@ -405,9 +407,9 @@ in that tool's secret storage rather than in a script you share.
 
 ### Do headings work in other languages?
 
-Your own copy can show any text, including Japanese or other scripts. Those characters are
-drawn by the visitor's system font with estimated spacing, which looks natural for
-full-width scripts and slightly loose for some others.
+Yes. Custom text can use Japanese, Chinese or other scripts. Those characters are drawn by
+the visitor's system font with estimated spacing, which looks natural for full-width
+scripts and slightly loose for some others.
 
 ### Can I use these outside GitHub?
 
