@@ -186,6 +186,7 @@ curl https://my-badges.pages.dev/text/state/<token>       # 一覧と現在の�
 | `size-N`、`size-Nrem` | 文字サイズ（ピクセル）、16 から 96（既定 40） |
 | `px` | rem ではなく正確なピクセルに固定（下記参照） |
 | `color-RRGGBB` | 文字とアクセントの色（16 進数、`#` なし） |
+| `warm` | GitHub と同じ文字色（既定）の代わりに、readmes の温かみのある配色を使う |
 | `gradient` | オレンジからピンク、ラベンダーへのグラデーション |
 | `rainbow` | 1 文字ずつ違う色が、ゆっくり移り変わる |
 | `upper`、`lower` | 大文字・小文字の変換 |

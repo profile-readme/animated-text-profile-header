@@ -23,7 +23,7 @@ export function cleanCustom(raw) {
 
 export function parseOptions(segments, query = null) {
   const opts = {
-    kind: "phrase", phrase: "hello", custom: null, pick: "random", effect: "none", font: "sans", color: null, paint: null,
+    kind: "phrase", phrase: "hello", custom: null, pick: "random", effect: "none", font: "sans", color: null, paint: null, palette: "github",
     textCase: null, size: 40, underline: false, sparkles: false, card: false, border: 0, theme: "auto", speed: 100, still: false,
   };
   if (segments.length > 16 || segments.join("/").length > 512) return { error: "too many options" };
@@ -45,6 +45,7 @@ export function parseOptions(segments, query = null) {
     else if (EFFECTS.includes(t)) opts.effect = t;
     else if (FONTS.includes(t)) opts.font = t;
     else if (t === "gradient" || t === "rainbow") opts.paint = t;
+    else if (t === "warm") opts.palette = "warm";
     else if (t === "upper" || t === "lower") opts.textCase = t;
     else if (t === "underline") opts.underline = true;
     else if (t === "sparkles") opts.sparkles = true;

@@ -186,6 +186,7 @@ Les options sont des segments de chemin après `/text/`, dans n'importe quel ord
 | `size-N`, `size-Nrem` | Taille de police en pixels, de 16 à 96 (40 par défaut) |
 | `px` | Pixels exacts au lieu de rem (voir ci-dessous) |
 | `color-RRGGBB` | Couleur du texte et de l'accent en hexadécimal, sans `#` |
+| `warm` | Palette chaude de readmes au lieu des couleurs de texte de GitHub (par défaut) |
 | `gradient` | Dégradé de l'orange au rose puis au lavande |
 | `rainbow` | Chaque lettre dans sa propre couleur, qui change lentement |
 | `upper`, `lower` | Changer la casse des lettres |

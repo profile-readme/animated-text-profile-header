@@ -186,6 +186,7 @@ curl https://my-badges.pages.dev/text/state/<token>       # 查看清單和目�
 | `size-N`、`size-Nrem` | 字體大小（像素），16 到 96（預設 40） |
 | `px` | 固定為精確像素而非 rem（見下文） |
 | `color-RRGGBB` | 文字和強調色的十六進位值，不含 `#` |
+| `warm` | 使用 readmes 的暖色配色，而非 GitHub 本身的文字顏色（預設） |
 | `gradient` | 從橘色到粉紅色再到薰衣草紫的漸層 |
 | `rainbow` | 每個字母一種顏色，並緩慢變化 |
 | `upper`、`lower` | 轉換大小寫 |

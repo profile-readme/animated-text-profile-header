@@ -186,6 +186,7 @@ curl https://my-badges.pages.dev/text/state/<token>       # 查看列表和当�
 | `size-N`、`size-Nrem` | 字号（像素），16 到 96（默认 40） |
 | `px` | 固定为精确像素而不是 rem（见下文） |
 | `color-RRGGBB` | 文字和强调色的十六进制值，不带 `#` |
+| `warm` | 使用 readmes 的暖色配色，而不是 GitHub 自身的文字颜色（默认） |
 | `gradient` | 从橙色到粉色再到薰衣草紫的渐变 |
 | `rainbow` | 每个字母一种颜色，并缓慢变化 |
 | `upper`、`lower` | 转换大小写 |

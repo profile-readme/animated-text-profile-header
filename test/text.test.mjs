@@ -127,3 +127,13 @@ test("rem sizing by default, px option, rem size tokens", async () => {
   assert.equal(parseOptions(["size-2.5rem"]).opts.size, 40);
   assert.equal(parseOptions(["size-100rem"]).opts.size, 96);
 });
+
+test("default colors match GitHub's text; warm keeps the readmes palette", async () => {
+  const { body } = await get("hello");
+  assert.match(body, /svg\{--bg:#ffffff;--fg:#1f2328;/);
+  assert.match(body, /prefers-color-scheme:dark\)\{svg\{--bg:#0d1117;--fg:#f0f6fc;/);
+  const warm = (await get("hello/warm")).body;
+  assert.match(warm, /--fg:#3b2418;/);
+  assert.match(warm, /--fg:#f6e7dc;/);
+  assert.match((await get("hello/dark")).body, /^[^@]*svg\{--bg:#0d1117;--fg:#f0f6fc;/);
+});

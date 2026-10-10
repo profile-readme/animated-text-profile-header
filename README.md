@@ -240,6 +240,7 @@ naming the position of the unknown option.
 | `size-N`, `size-Nrem` | Font size in pixels, 16 to 96 (default 40) |
 | `px` | Pin exact pixels instead of rem (see below) |
 | `color-RRGGBB` | Text and accent color in hex, without `#` |
+| `warm` | Warm readmes palette instead of GitHub's own text colors (default) |
 | `gradient` | Orange to pink to lavender gradient |
 | `rainbow` | Each letter in its own slowly cycling color |
 | `upper`, `lower` | Change the letter case |

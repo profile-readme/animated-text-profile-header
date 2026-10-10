@@ -18,9 +18,18 @@ const FAMILY = {
   serif: '"Times New Roman","Liberation Serif",Times,"Noto Serif JP",serif',
   mono: '"Courier New","Liberation Mono",Courier,"Noto Sans Mono CJK JP",monospace',
 };
-const PALETTE = {
-  light: { bg: "#fff8f1", fg: "#3b2418", line: "#ecd9c8" },
-  dark: { bg: "#241e2b", fg: "#f6e7dc", line: "#3a3142" },
+// Default: GitHub's own text, canvas and border colors, so a heading reads like the README
+// text around it. An image cannot inherit the page's colors, so these are matched exactly.
+// "warm" keeps the readmes palette (cream and cocoa) for a softer look.
+const PALETTES = {
+  github: {
+    light: { bg: "#ffffff", fg: "#1f2328", line: "#d1d9e0" },
+    dark: { bg: "#0d1117", fg: "#f0f6fc", line: "#3d444d" },
+  },
+  warm: {
+    light: { bg: "#fff8f1", fg: "#3b2418", line: "#ecd9c8" },
+    dark: { bg: "#241e2b", fg: "#f6e7dc", line: "#3a3142" },
+  },
 };
 const RAINBOW = ["#ff5d8f", "#f08a3c", "#e6b800", "#2bb3a3", "#4a90e2", "#8e6cdf"];
 const STAR = "M0,-1 C0.12,-0.12 0.12,-0.12 1,0 C0.12,0.12 0.12,0.12 0,1 C-0.12,0.12 -0.12,0.12 -1,0 C-0.12,-0.12 -0.12,-0.12 0,-1Z";
@@ -52,6 +61,7 @@ export function renderText(text, opts) {
   const accent = "#" + (opts.color ?? "f08a3c");
 
   const vars = (p) => `--bg:${p.bg};--fg:${opts.color ? "#" + opts.color : p.fg};--line:${p.line};`;
+  const PALETTE = PALETTES[opts.palette] ?? PALETTES.github;
   let css = `svg{${vars(opts.theme === "dark" ? PALETTE.dark : PALETTE.light)}}`;
   if (opts.theme === "auto" || opts.theme === "transparent") css += `@media (prefers-color-scheme:dark){svg{${vars(PALETTE.dark)}}}`;
   const fill = opts.paint === "gradient" ? "url(#g)" : "var(--fg)";

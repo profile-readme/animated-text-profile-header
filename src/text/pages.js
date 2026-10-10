@@ -36,6 +36,7 @@ export const OPTION_GROUPS = [
       ["size-N", "Font size in pixels, 16 to 96 (default 40); also in rem, e.g. size-2rem (1rem = 16px)."],
       ["px", "Pin the image to exact pixels. By default it is sized in rem, so it grows with the reader's browser font size."],
       ["color-RRGGBB", "Text and accent color as 3 or 6 hex digits without #."],
+      ["warm", "Use the warm readmes palette (cream and cocoa) instead of GitHub's own text colors, which are the default."],
       ["gradient", "Orange to pink to lavender gradient across the text."],
       ["rainbow", "Each letter in its own color, slowly cycling."],
       ["upper, lower", "Change the letter case."],
@@ -112,7 +113,7 @@ ${examples.map(([p, alt]) => `<figure><img src="/${APP}/${p}" alt="${esc(alt)}">
   <div><label for="what">Or a built-in text</label><select id="what">${opt([...Object.entries(PHRASES).map(([k, v]) => [k, v]), ["status", "Your status"], ["quote", "A quote"]])}</select></div>
   <div><label for="effect">Effect</label><select id="effect">${opt([["", "none (default)"], ["typing", "typing"], ["wave", "wave"], ["fade", "fade"], ["glow", "glow"]])}</select></div>
   <div><label for="font">Font</label><select id="font">${opt([["", "sans (default)"], ["serif", "serif"], ["mono", "mono"]])}</select></div>
-  <div><label for="paint">Color</label><select id="paint">${opt([["", "theme (default)"], ["gradient", "gradient"], ["rainbow", "rainbow"], ["color-f08a3c", "orange"], ["color-e91e63", "pink"], ["color-8e6cdf", "lavender"], ["color-2bb3a3", "mint"], ["color-4a90e2", "sky"]])}</select></div>
+  <div><label for="paint">Color</label><select id="paint">${opt([["", "GitHub text color (default)"], ["warm", "warm palette"], ["gradient", "gradient"], ["rainbow", "rainbow"], ["color-f08a3c", "orange"], ["color-e91e63", "pink"], ["color-8e6cdf", "lavender"], ["color-2bb3a3", "mint"], ["color-4a90e2", "sky"]])}</select></div>
   <div><label for="size">Size (16 to 96 px)</label><input id="size" type="number" min="16" max="96" placeholder="40"></div>
   <div><label for="theme">Theme</label><select id="theme">${opt([["", "auto (default)"], ["light", "light"], ["dark", "dark"], ["transparent", "transparent"]])}</select></div>
   <div><label for="tcase">Case</label><select id="tcase">${opt([["", "as written"], ["upper", "UPPER"], ["lower", "lower"]])}</select></div>

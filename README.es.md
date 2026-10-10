@@ -186,6 +186,7 @@ Las opciones son segmentos de ruta después de `/text/`, en cualquier orden. Se 
 | `size-N`, `size-Nrem` | Tamaño de fuente en píxeles, de 16 a 96 (40 por defecto) |
 | `px` | Píxeles exactos en lugar de rem (ver abajo) |
 | `color-RRGGBB` | Color del texto y del acento en hexadecimal, sin `#` |
+| `warm` | Paleta cálida de readmes en lugar de los colores de texto de GitHub (por defecto) |
 | `gradient` | Degradado de naranja a rosa y a lavanda |
 | `rainbow` | Cada letra en su propio color, que cambia despacio |
 | `upper`, `lower` | Cambiar mayúsculas y minúsculas |
