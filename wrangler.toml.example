@@ -1,0 +1,10 @@
+# Copy to wrangler.toml (git-ignored) and fill in your own values.
+name = "my-pages-project"
+pages_build_output_dir = "./public-empty"
+compatibility_date = "2026-10-01"
+
+# Remembers which status is live. Create with:
+#   npx wrangler kv namespace create text-state
+[[kv_namespaces]]
+binding = "TEXT_STATE"
+id = "<your-kv-namespace-id>"

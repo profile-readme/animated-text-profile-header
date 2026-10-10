@@ -1,0 +1,32 @@
+animated-text-profile-header
+Copyright (C) 2026 Aesthetic Vulpes (github.com/didvc)
+https://github.com/profile-readme/animated-text-profile-header
+
+Source code is licensed under the GNU Affero General Public License v3.0 only
+(AGPL-3.0-only). Full text: LICENSE. Each source file carries an
+SPDX-License-Identifier header.
+
+If you run a modified version of this software as a network service, the AGPL
+requires you to offer the corresponding source code to its users.
+
+Font metrics: src/text/metrics.generated.js holds character advance widths
+measured from Liberation Sans Bold and Liberation Serif Bold. No font data or
+glyph outlines are included; only the measured widths are stored, so that
+letters can be placed one by one. The fonts themselves are drawn by each
+viewer's system (Arial, Times New Roman, Courier New or their equivalents).
+
+Demo statuses and quotes in src/text/content.js are written for this project.
+Owners replace them with their own text through environment variables, which
+never become part of this repository.
+
+Third-party code: none is bundled. The project has no runtime or build
+dependencies. Wrangler (Cloudflare) and ImageMagick are optional external tools
+used during development and are not distributed with this repository.
+
+Trademarks: GitHub is a trademark of GitHub, Inc. Cloudflare and Cloudflare
+Pages are trademarks of Cloudflare, Inc. Arial and Times New Roman are
+trademarks of their respective owners and are named only to describe font
+compatibility. This project is not affiliated with, endorsed by or sponsored
+by any of these companies.
+
+If you deploy your own copy, replace the copyright holder in site.config.json.
