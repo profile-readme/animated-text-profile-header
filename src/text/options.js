@@ -51,7 +51,8 @@ export function parseOptions(segments, query = null) {
     else if (t === "card") opts.card = true;
     else if (t === "static") opts.still = true;
     else if (THEMES.includes(t)) opts.theme = t;
-    else if ((m = t.match(/^size-(\d{1,3})$/))) opts.size = bounded(+m[1], 16, 96);
+    else if (t === "px") opts.px = true;
+    else if ((m = t.match(/^size-(\d{1,4}(?:\.\d{1,3})?)(rem)?$/))) opts.size = bounded(Math.round(+m[1] * (m[2] ? 16 : 1)), 16, 96);
     else if ((m = t.match(/^border-(\d{1,2})$/))) { opts.border = bounded(+m[1], 0, 8); opts.card = true; }
     else if ((m = t.match(/^speed-(\d{1,3})$/))) opts.speed = bounded(+m[1], 25, 400);
     else if ((m = t.match(/^color-([0-9a-f]{3}|[0-9a-f]{6})$/))) opts.color = m[1];

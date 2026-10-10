@@ -235,7 +235,8 @@ naming the position of the unknown option.
 | `speed-N` | Effect speed in percent, 25 to 400 |
 | `static` | No motion at all |
 | `sans`, `serif`, `mono` | Font (default `sans`) |
-| `size-N` | Font size in pixels, 16 to 96 (default 40) |
+| `size-N`, `size-Nrem` | Font size in pixels, 16 to 96 (default 40) |
+| `px` | Pin exact pixels instead of rem (see below) |
 | `color-RRGGBB` | Text and accent color in hex, without `#` |
 | `gradient` | Orange to pink to lavender gradient |
 | `rainbow` | Each letter in its own slowly cycling color |
@@ -245,6 +246,14 @@ naming the position of the unknown option.
 | `card` | Rounded card background |
 | `border-N` | Card border in pixels, 0 to 8 |
 | `auto`, `light`, `dark`, `transparent` | Theme (default `auto`) |
+
+### Sizing in rem
+
+Every heading is sized in rem, where 1rem is 16 pixels. With default browser settings it
+looks exactly like a pixel size. When a reader has raised the default font size in their
+browser, often to make text easier to read, the heading grows with it, just like the text
+around it. You can also write sizes in rem, as in `size-2rem`, which matches a Markdown `#`
+heading on GitHub. Add `px` when a heading must keep an exact pixel size.
 
 ## Recipes
 

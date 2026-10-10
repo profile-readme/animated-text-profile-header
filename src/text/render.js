@@ -8,6 +8,9 @@ import { METRICS } from "./metrics.generated.js";
 export const esc = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const r1 = (n) => Math.round(n * 10) / 10;
+// Root size in rem (1rem = 16px) so the whole image follows the reader's browser font-size
+// setting; identical to pixels at the default 16px. The px option pins exact pixels instead.
+const dim = (n, px) => (px ? String(n) : `${Math.round((n / 16) * 10000) / 10000}rem`);
 const r2 = (n) => Math.round(n * 100) / 100;
 
 const FAMILY = {
@@ -113,7 +116,7 @@ export function renderText(text, opts) {
   const underline = opts.underline ? `<line x1="${x0}" y1="${r1(base + S * 0.2)}" x2="${r1(x0 + TW)}" y2="${r1(base + S * 0.2)}" stroke="${opts.paint === "gradient" ? "url(#g)" : accent}" stroke-width="${r1(S * 0.08)}" stroke-linecap="round"/>` : "";
   const letters = chars.map((ch, i) => (ch === " " ? "" : `<text class="l l${i}" x="${r1(x0 + xs[i])}" y="${base}">${esc(ch)}</text>`)).join("");
   return (
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="t">` +
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${dim(W, opts.px)}" height="${dim(H, opts.px)}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="t">` +
     `<!-- (c) ${esc(SITE.copyrightYear)} ${esc(SITE.copyrightHolder)} (${esc(SITE.copyrightUrl)}) -->` +
     `<title id="t">${esc(text)}</title><style>${css}</style><defs>${defs}</defs>${bg}${glow}${underline}${letters}${extra}</svg>`
   );
@@ -123,7 +126,7 @@ export function renderNotice(message) {
   const text = `text: ${message} (see help)`;
   const W = Math.round(text.length * 7.2 + 24);
   return (
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="28" viewBox="0 0 ${W} 28" role="img" aria-label="${esc(text)}">` +
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${dim(W)}" height="${dim(28)}" viewBox="0 0 ${W} 28" role="img" aria-label="${esc(text)}">` +
     `<title>${esc(text)}</title><rect width="${W}" height="28" rx="14" fill="#fde2e4"/>` +
     `<text x="${W / 2}" y="18.5" text-anchor="middle" fill="#9b2c3a" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="12">${esc(text)}</text></svg>`
   );

@@ -33,7 +33,8 @@ export const OPTION_GROUPS = [
     title: "Look",
     rows: [
       ["sans, serif, mono", "Font (default sans): Arial, Times New Roman or Courier New and their equivalents."],
-      ["size-N", "Font size in pixels, 16 to 96 (default 40)."],
+      ["size-N", "Font size in pixels, 16 to 96 (default 40); also in rem, e.g. size-2rem (1rem = 16px)."],
+      ["px", "Pin the image to exact pixels. By default it is sized in rem, so it grows with the reader's browser font size."],
       ["color-RRGGBB", "Text and accent color as 3 or 6 hex digits without #."],
       ["gradient", "Orange to pink to lavender gradient across the text."],
       ["rainbow", "Each letter in its own color, slowly cycling."],

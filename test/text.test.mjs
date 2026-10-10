@@ -120,3 +120,10 @@ test("builder script keeps its regex escapes (letter s must survive)", async () 
   assert.ok(js.includes('replace(/[\\[\\]]/g,"")'), "bracket regex is /[\\[\\]]/g");
   new Function(js); // the served script must at least parse
 });
+
+test("rem sizing by default, px option, rem size tokens", async () => {
+  assert.match((await get("hello")).body, /^<svg[^>]*width="[\d.]+rem" height="[\d.]+rem"/);
+  assert.match((await get("hello/px")).body, /^<svg[^>]*width="\d+" height="\d+" viewBox/);
+  assert.equal(parseOptions(["size-2.5rem"]).opts.size, 40);
+  assert.equal(parseOptions(["size-100rem"]).opts.size, 96);
+});
